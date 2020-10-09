@@ -51,7 +51,7 @@ if ( is_admin() ) {
 	 * эта проверка происходит раз в неделю...
 	 * @see https://wp-kama.ru/function/wp_check_browser_version
 	 */
-	add_filter( 'pre_site_transient_browser_' . md5( $_SERVER['HTTP_USER_AGENT'] ), '__return_true' );
+	add_filter( 'pre_site_transient_browser_' . md5( $_SERVER['HTTP_USER_AGENT'] ), '__return_empty_array' );
 }
 
 // eof;
